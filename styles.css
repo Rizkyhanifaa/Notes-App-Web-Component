@@ -1,0 +1,96 @@
+/* reset style */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#welcome-message {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 20px; 
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.welcome-text {
+    font-family: "Poppins", sans-serif;
+    color: #333;
+}
+
+.welcome-text h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #6a0dad;
+}
+
+.welcome-text p {
+    font-size: 15px;
+    color: #555;
+}
+
+.welcome-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.welcome-images img {
+    width: 150px; 
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+}
+
+/* Main - Form */
+main {
+    display: grid;
+    place-items: center; 
+    min-height: 60vh; 
+    width: 100%;
+    justify-content: center;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    width: 50%;
+    background: white;
+    text-align: center;
+    color: #6a0dad;
+    margin-bottom: 20px;
+}
+
+/*Main - List Catatan*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    grid-auto-rows: 1fr;
+}
+
+/* Agar layar responsif */
+@media screen and (max-width: 1200px) {
+    main {
+        flex-flow: column nowrap; /*ketika layarnya kecil, elemen di main akan sejajar vertikal*/
+    }
+
+    main aside {
+        align-self: center ;
+    }
+}
+
